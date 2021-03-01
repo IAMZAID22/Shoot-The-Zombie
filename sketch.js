@@ -325,6 +325,15 @@ function setup() {
 function draw() {
   background(0, 11, 24)
 
+  if(player.x !== 150&&gameState === "play"){
+    textSize(35)
+    textFont('Georgia');
+    fill("black")
+    text("You're postion has been changed", 20, 280)
+    player.x = 150
+    player.y = 100
+  }
+  
   if(mousePressedOver(object3)&&gameState === "play"){
     gameState = "pause"
     bar1.visible = false
